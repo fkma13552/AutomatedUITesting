@@ -1,0 +1,60 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Olx Tests",
+    "children" : [ {
+      "name" : "UI",
+      "children" : [ {
+        "name" : "TestChangeLanguage",
+        "uid" : "6510c50e78a278db",
+        "parentUid" : "206ec3cac48514b382d7969cdd10150f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1636207516775,
+          "stop" : 1636207521256,
+          "duration" : 4481
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "206ec3cac48514b382d7969cdd10150f"
+    }, {
+      "name" : "Logo",
+      "children" : [ {
+        "name" : "TestLogoTitle",
+        "uid" : "12a6ebddf5f0d756",
+        "parentUid" : "b34266fe244bc679941c2d327fa5ccbb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1636207521418,
+          "stop" : 1636207523071,
+          "duration" : 1653
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "b34266fe244bc679941c2d327fa5ccbb"
+    }, {
+      "name" : "Search",
+      "children" : [ {
+        "name" : "TestSearch",
+        "uid" : "3bbfdf9891dd9078",
+        "parentUid" : "58160dc9108eca4e5cdbc0ed82903231",
+        "status" : "passed",
+        "time" : {
+          "start" : 1636207523098,
+          "stop" : 1636207526141,
+          "duration" : 3043
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "58160dc9108eca4e5cdbc0ed82903231"
+    } ],
+    "uid" : "19b793ecbb0ed99ea30597089bd85c10"
+  } ]
+}
