@@ -28,7 +28,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="WebDrivers\" />
     <Folder Include="PageObjects\" />
   </ItemGroup>
 </Project>

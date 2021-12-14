@@ -16,7 +16,7 @@ using SeleniumExtras.WaitHelpers;
 namespace AutomatedTesting
 {
     [AllureNUnit]
-    [AllureSuite("Olx Tests")]
+    [AllureSuite("Rozetka tests")]
     public class Tests
     {
         private HomePage _homePage;
@@ -25,9 +25,7 @@ namespace AutomatedTesting
         [OneTimeSetUp]
         public void Setup()
         {
-            _driver = new FirefoxDriver(@"/Users/misha/Projects/AutomatedTesting/AutomatedTesting/WebDrivers");
-    
-           
+            _driver = new ChromeDriver("C:\\Users\\ozonp\\RiderProjects\\KPI-automated-testing\\AutomatedTesting");
         }
 
 
@@ -38,7 +36,7 @@ namespace AutomatedTesting
         public void TestLogoTitle()
         {
             _homePage = new HomePage(_driver);
-            const string expectedTitle = "На головну OLX - безкоштовні оголошення/На главную OLX - бесплатные объявления";
+            const string expectedTitle = "Інтернет-магазин Rozetka.ua - №1/Интернет магазин Rozetka.ua - №1";
             var actualTitle = _homePage.Logo.GetAttribute("title");
             
             Assert.IsTrue(expectedTitle.Contains(actualTitle));
@@ -50,7 +48,7 @@ namespace AutomatedTesting
         [AllureSubSuite("Search")]
         public void TestSearch()
         {
-            const string searchTitle = "Дюна";
+            const string searchTitle = "Samsung";
             var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
             _homePage = new HomePage(_driver);
             
@@ -59,7 +57,7 @@ namespace AutomatedTesting
 
             var searchResult = new SearchResultPage(wait);
 
-            var resultTitle = searchResult.FirstSearchResult.FindElement(By.TagName("strong")).Text;
+            var resultTitle = searchResult.FirstSearchResult.FindElement(By.TagName("span")).Text;
             
             Assert.IsTrue(resultTitle.Contains(searchTitle));
         }
@@ -75,9 +73,9 @@ namespace AutomatedTesting
             
             _homePage.ChangeLanguage.Click();
 
-            var messageIconText = _homePage.Messages.FindElement(By.TagName("span")).Text;
+            var findButton = _homePage.FindButton.Text;
 
-            Assert.AreEqual("Сообщения", messageIconText);
+            Assert.AreEqual("Найти", findButton);
         }
         
         
@@ -85,6 +83,7 @@ namespace AutomatedTesting
         public void TearDown()
         {
             _driver.Quit();
+            
         }
     }
 }

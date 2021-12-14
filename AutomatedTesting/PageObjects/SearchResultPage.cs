@@ -14,6 +14,6 @@ namespace AutomatedTesting.PageObjects
         }
 
         public IWebElement FirstSearchResult => _wait.Until(
-            ExpectedConditions.ElementExists(By.CssSelector("a.marginright5.link.linkWithHash.detailsLink.linkWithHashPromoted")));
+            ExpectedConditions.ElementExists(By.CssSelector("a.goods-tile__heading")));
     }
 }

@@ -6,7 +6,7 @@ namespace AutomatedTesting.PageObjects
 {
     public class HomePage
     {
-        private const string Url = "https://www.olx.ua/uk/";
+        private const string Url = "https://www.rozetka.com.ua/";
         private IWebDriver _driver;
         public HomePage(IWebDriver driver)
         {
@@ -15,17 +15,17 @@ namespace AutomatedTesting.PageObjects
             PageFactory.InitElements(driver, this);
         }
 
-        [FindsBy(How = How.CssSelector, Using = "a#headerLogo.olx-website-rebranded")]
+        [FindsBy(How = How.CssSelector, Using = "a.header__logo")]
         public IWebElement Logo { get; set; }
         
-        [FindsBy(How = How.CssSelector, Using="input#headerSearch")]
+        [FindsBy(How = How.CssSelector, Using="input.search-form__input")]
         public IWebElement SearchInput { get; set; }
         
-        [FindsBy(How = How.CssSelector, Using="a#changeLang")]
+        [FindsBy(How = How.CssSelector, Using="ul.lang-header")]
         public IWebElement ChangeLanguage { get; set; }
         
-        [FindsBy(How = How.CssSelector, Using="li#nav-conversations")]
-        public IWebElement Messages { get; set; }
+        [FindsBy(How = How.CssSelector, Using="button.search-form__submit")]
+        public IWebElement FindButton { get; set; }
       
     }
 }
